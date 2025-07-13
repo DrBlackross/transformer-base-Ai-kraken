@@ -129,7 +129,7 @@ python kraken-trans-bot.py
 
 The bot will first either load a previously saved optimal model and scaler (if available) or initiate a new training process, which includes the ATR multiplier search. Once training is complete (or a model is loaded), it will enter its continuous trading loop, making decisions at the DECISION_INTERVAL_SECONDS interval defined in your settings.
 
-You can gracefully stop the bot at any time by pressing Ctrl+C. This action will trigger a shutdown routine that includes saving your trade history.
+You can stop the bot at any time by pressing Ctrl+C. This action will trigger a shutdown routine that includes saving your trade history.
 Starting at a "Low Price Point"
 
 You mentioned starting the script at the market's lowest price point for the day. The bot itself is designed to make autonomous decisions based on its model's predictions and technical indicators. It does not have an external mechanism to "wait" for a human-defined "low point."
@@ -154,7 +154,7 @@ Then, open your web browser and navigate to the address provided by TensorBoard 
 
 8. Analyzing Trade History
 
-Upon a graceful shutdown of the bot (via Ctrl+C), a trade_history.csv file will be generated or updated in the project's root directory. This file contains a detailed record of all transactions executed during that session, including trade type, amount, price, and timestamp.
+Upon a shutdown of the bot (via Ctrl+C), a trade_history.csv file will be generated or updated in the project's root directory. This file contains a detailed record of all transactions executed during that session, including trade type, amount, price, and timestamp.
 
 (the usual yada-yada)
 Disclaimer: Cryptocurrency trading carries substantial financial risk, including the potential for total loss of capital. This trading bot is provided for educational, research, and experimental purposes only. It is not financial advice. Do not use this bot for live trading with funds you cannot afford to lose. Always thoroughly understand the code, test extensively in paper trading mode, and fully comprehend the risks involved before deploying any automated trading system with real money. The author assumes no responsibility for any financial losses incurred through the use of this software.
