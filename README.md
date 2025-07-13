@@ -49,8 +49,7 @@ Prerequisites
 
 First, clone this GitHub repository to your local machine:
 
-git clone https://github.com/your-username/kraken-trans-bot.git
-cd kraken-trans-bot
+git clone [https://github.com/your-username/kraken-trans-bot.git](https://github.com/DrBlackross/transformer-base-Ai-kraken.git) ; cd transformer-base-Ai-kraken
 
 2. Set Up a Python Virtual Environment
 
