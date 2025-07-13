@@ -1,3 +1,5 @@
+(i've been lurking on github for years, this is my best attempt at replacing all the old crypto strategy based scripts (for my needs) since askmike came out with Gekko... here is my take, feel free to muck with it just give credit, any issues, you can post but i will probably never see it LOL)
+
 # Kraken Transformer Trading Bot
 
 So far its worked pretty good, not jumping major profits, but for karken its worked... pretty general, it will pull candle data for 2 years from kraken (still working on coinbase script), build a handful of models from that data, then pick the best one and run (checking market every 5 minutes) and decide an action. It main purpose (if i did this right) is to run in profit seeking for the overall portfolio. 
