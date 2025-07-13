@@ -179,3 +179,4 @@ For persistent environment variables on Windows, you will need to add them via t
 
 **Disclaimer**: Cryptocurrency trading carries substantial financial risk, including the potential for total loss of capital. This trading bot is provided for educational, research, and experimental purposes only. It is not financial advice. Do not use this bot for live trading with funds you cannot afford to lose. Always thoroughly understand the code, test extensively in paper trading mode, and fully comprehend the risks involved before deploying any automated trading system with real money. The author assumes no responsibility for any financial losses incurred through the use of this software.
 
+**If it works or you think its cool, send me a few Dogecoin  DNgPXztNRmj5qp5jdPP2ZKm1r4u6eQmaZJ**
