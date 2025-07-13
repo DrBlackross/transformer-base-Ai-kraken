@@ -7,32 +7,32 @@ Project Overview
 
 The bot operates by:
 
-    Historical Data Acquisition: Pulling approximately two years of historical candlestick data from Kraken for the selected trading pair.
+ Historical Data Acquisition: Pulling approximately two years of historical candlestick data from Kraken for the selected trading pair.
 
-    Model Training & Selection: Training multiple Transformer models based on this extensive dataset. It then automatically selects the best-performing model (based on validation loss) and its corresponding optimal ATR multiplier.
+ Model Training & Selection: Training multiple Transformer models based on this extensive dataset. It then automatically selects the best-performing model (based on validation loss) and its corresponding optimal ATR multiplier.
 
-    Market Monitoring & Decision Making: Continuously monitoring the market (checking every 5 minutes by default) and using the trained model to predict future price movements (Buy, Hold, Sell actions).
+ Market Monitoring & Decision Making: Continuously monitoring the market (checking every 5 minutes by default) and using the trained model to predict future price movements (Buy, Hold, Sell actions).
 
-    Portfolio Profit Seeking: The primary objective of the bot's strategy is to seek overall portfolio profit. It aims to make decisions that lead to capital appreciation over time.
+ Portfolio Profit Seeking: The primary objective of the bot's strategy is to seek overall portfolio profit. It aims to make decisions that lead to capital appreciation over time.
 
 While it might not generate "major profits" instantly, the goal is consistent, positive performance tailored for the Kraken market.
 Features
 
-    Transformer Model: Utilizes a custom Transformer neural network to predict future price actions (Buy, Hold, Sell).
+Transformer Model: Utilizes a custom Transformer neural network to predict future price actions (Buy, Hold, Sell).
 
-    Comprehensive Technical Indicators: Integrates a wide range of pandas-ta indicators (RSI, MACD, Bollinger Bands, OBV, ADX, CCI, ATR, VWAP, NATR, TRIX, STOCH, EMA) for robust market analysis.
+Comprehensive Technical Indicators: Integrates a wide range of pandas-ta indicators (RSI, MACD, Bollinger Bands, OBV, ADX, CCI, ATR, VWAP, NATR, TRIX, STOCH, EMA) for robust market analysis.
 
-    Adaptive ATR Multiplier Optimization: Automatically searches and selects the most effective Average True Range (ATR) multiplier during training. This multiplier defines the volatility-based thresholds for trade signals, adapting the strategy to market conditions.
+Adaptive ATR Multiplier Optimization: Automatically searches and selects the most effective Average True Range (ATR) multiplier during training. This multiplier defines the volatility-based thresholds for trade signals, adapting the strategy to market conditions.
 
-    Paper Trading Mode: Allows for risk-free simulation of trading strategies using real market data.
+Paper Trading Mode: Allows for risk-free simulation of trading strategies using real market data.
 
-    Live Trading Mode: Capable of executing actual trades on the Kraken exchange (requires secure API key configuration).
+Live Trading Mode: Capable of executing actual trades on the Kraken exchange (requires secure API key configuration).
 
-    Highly Configurable: Easily adjust trading pairs (DOGEUSDT or XBTUSDT), initial balances, minimum trade amounts, model training parameters (e.g., lookback periods, sequence length, epochs), and individual technical indicator settings.
+Highly Configurable: Easily adjust trading pairs (DOGEUSDT or XBTUSDT), initial balances, minimum trade amounts, model training parameters (e.g., lookback periods, sequence length, epochs), and individual technical indicator settings.
 
-    TensorBoard Integration: Provides detailed logging of both model training progress and live trading performance metrics for visual analysis.
+TensorBoard Integration: Provides detailed logging of both model training progress and live trading performance metrics for visual analysis.
 
-    Detailed Trade History: Automatically saves a CSV file documenting all executed trades for post-analysis.
+Detailed Trade History: Automatically saves a CSV file documenting all executed trades for post-analysis.
 
 Getting Started
 
@@ -104,9 +104,9 @@ Open the kraken-trans-bot.py file in your preferred code editor and navigate to 
 
 Key parameters you might want to adjust include:
 
-    LIVE_TRADING: Set to False for paper trading (highly recommended for initial testing), or True for live trading.
+   LIVE_TRADING: Set to False for paper trading (highly recommended for initial testing), or True for live trading.
 
-    TRADING_PAIR: Select your desired cryptocurrency pair, e.g., 'DOGEUSDT' or 'XBTUSDT'.
+   TRADING_PAIR: Select your desired cryptocurrency pair, e.g., 'DOGEUSDT' or 'XBTUSDT'.
 
     INITIAL_USDT_BALANCE / INITIAL_CRYPTO_BALANCE: These define your starting capital for paper trading simulations. For live trading, your actual exchange balances will be used.
 
