@@ -2,6 +2,9 @@
 
 # Kraken Transformer Trading Bot
 
+<img width="1760" height="688" alt="image" src="https://github.com/user-attachments/assets/d4340160-823b-4df2-9cfa-10bbceb6a0aa" />
+
+
 This project implements an advanced cryptocurrency trading bot designed for the Kraken exchange. It leverages a Transformer neural network for predictive analysis, integrates various technical indicators, and supports both paper and live trading modes. A core feature of this bot is its Adaptive ATR (Average True Range) Multiplier Optimization, which dynamically fine-tunes trade thresholds for improved strategy performance. Project Overview
 
 ## **The bot operates by:**
