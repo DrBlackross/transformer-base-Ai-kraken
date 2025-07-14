@@ -56,21 +56,21 @@ First, clone this GitHub repository to your local machine:
 **2.** **Set Up a Python Virtual Environment**
 It is highly recommended to use a Python virtual environment to manage project dependencies and avoid conflicts with your system's Python installation. For Linux/macOS:
 
-	python3 \-m venv venv source venv/bin/activate
+	python3 -m venv venv source venv/bin/activate
 
 For Windows (Command Prompt):
 
-	python \-m venv venv venv\\Scripts\\activate.bat
+	python -m venv venv venv\Scripts\activate.bat
 
 For Windows (PowerShell):
 
-	python \-m venv venv .\\venv\\Scripts\\Activate.ps1
+	python -m venv venv .\\venv\\Scripts\\Activate.ps1
 
 **3.** **Install Dependencies**
 
-Once your virtual environment is activated, install the required packages using the requirements\_x86.txt file:
+Once your virtual environment is activated, install the required packages using the requirements_x86.txt file:
 
-	pip install \-r requirements\_x86.txt
+	pip install -r requirements_x86.txt
 
 This command will install all necessary libraries, including torch, transformers, pandas, krakenex, pandas-ta, and tensorboard. 
 
@@ -80,7 +80,7 @@ If you intend to use live trading (LIVE\_TRADING \= True), you must set your Kra
 
 Important: Never hardcode your API keys directly into the script files (unless directly testing). 
 
-For Linux/macOS (add to your \~/.bashrc, \~/.zshrc, or equivalent):
+For Linux/macOS (add to your ~/.bashrc, ~/.zshrc, or equivalent):
 
 export KRAKEN\_API\_KEY="YOUR\_KRAKEN\_API\_KEY" export KRAKEN\_API\_SECRET="YOUR\_KRAKEN\_API\_SECRET"
 
@@ -91,30 +91,30 @@ export KRAKEN\_API\_KEY="YOUR\_KRAKEN\_API\_KEY" export KRAKEN\_API\_SECRET="YOU
 
 It should look like this if you hard code the keys in the script right
 
-COINBASE\_API\_KEY \= os.getenv(organizations/COINBASE\_KEY\_SHOULD\_BE\_LIKE\_THIS/apiKeys/AND\_THE\_REST\_OF\_THE\_KEY)
+COINBASE_API_KEY = os.getenv(organizations/COINBASE_KEY_SHOULD_BE_LIKE_THIS/apiKeys/AND_THE_REST_OF_THE_KEY)
 
-COINBASE\_API\_SECRET \= os.getenv(\-----BEGIN EC PRIVATE KEY-----\\FUN\_PART\_OF\_COINBASE\_NIGHTMARE\_API\_SECRET\\n\-----END EC PRIVATE KEY-----\\n)  
+COINBASE_API_SECRET = os.getenv(\-----BEGIN EC PRIVATE KEY-----\FUN_PART_OF_COINBASE_NIGHTMARE_API_SECRET\n\-----END EC PRIVATE KEY-----\n)  
 
 (if that doesn't work try adding ‘ ‘ at the begining and end) 
 
-COINBASE\_API\_KEY \= os.getenv(‘organizations/COINBASE\_KEY\_SHOULD\_BE\_LIKE\_THIS/apiKeys/AND\_THE\_REST\_OF\_THE\_KEY’)
+COINBASE_API_KEY = os.getenv(‘organizations/COINBASE_KEY_SHOULD_BE_LIKE_THIS/apiKeys/AND_THE_REST_OF_THE_KEY’)
 
-COINBASE\_API\_SECRET \= os.getenv(‘\-----BEGIN EC PRIVATE KEY-----\\FUN\_PART\_OF\_COINBASE\_NIGHTMARE\_API\_SECRET\\n\-----END EC PRIVATE KEY-----\\n’)
+COINBASE_API_SECRET = os.getenv(‘\-----BEGIN EC PRIVATE KEY-----\FUN_PART_OF_COINBASE_NIGHTMARE_API_SECRET\n\-----END EC PRIVATE KEY-----\n’)
 
 But, I know for sure hardcoding worked for testing, coinbase api is bit *weird* (if someone knows how to .env this please fork it and just give credit lol)
 
 ------------
 
 
-After adding these, either run source \~/.bashrc (or your respective file) or open a new terminal session for the changes to take effect. For Windows (Command Prompt \- temporary for the current session):
+After adding these, either run source ~/.bashrc (or your respective file) or open a new terminal session for the changes to take effect. For Windows (Command Prompt - temporary for the current session):
 
-set KRAKEN\_API\_KEY="YOUR\_KRAKEN\_API\_KEY" set KRAKEN\_API\_SECRET="YOUR\_KRAKEN\_API\_SECRET"
+set KRAKEN_API_KEY="YOUR_KRAKEN_API_KEY" set KRAKEN_API_SECRET="YOUR_KRAKEN_API_SECRET"
 
 For Windows (PowerShell \- temporary for the current session):
 
-$env:KRAKEN\_API\_KEY="YOUR\_KRAKEN\_API\_KEY" $env:KRAKEN\_API\_SECRET="YOUR\_KRAKEN\_API\_SECRET"
+$env:KRAKEN_API_KEY="YOUR_KRAKEN_API_KEY" $env:KRAKEN_API_SECRET="YOUR_KRAKEN_API_SECRET"
 
-For persistent environment variables on Windows, you will need to add them via the System Properties \-\> Environment Variables dialog. 
+For persistent environment variables on Windows, you will need to add them via the System Properties -\> Environment Variables dialog. 
 
 
 **5.** **Customize Bot Settings**
@@ -123,21 +123,21 @@ For persistent environment variables on Windows, you will need to add them via t
 
 #### **Key parameters you might want to adjust include (for fun IN PAPER):**
 
- LIVE\_TRADING: Set to False for paper trading (highly recommended for initial testing), or True for live trading (see yada-yada at bottom of README).
+ LIVE_TRADING: Set to False for paper trading (highly recommended for initial testing), or True for live trading (see yada-yada at bottom of README).
 
- TRADING\_PAIR: Select your desired cryptocurrency pair, e.g., 'DOGEUSDT' or 'XBTUSDT' (Kraken) OR 'DOGE/USDT' or 'BTC/USDT' (CoinBase).
+ TRADING_PAIR: Select your desired cryptocurrency pair, e.g., 'DOGEUSDT' or 'XBTUSDT' (Kraken) OR 'DOGE/USDT' or 'BTC/USDT' (CoinBase).
 
- INITIAL\_USDT\_BALANCE / INITIAL\_CRYPTO\_BALANCE: These define your starting capital for paper trading simulations. For live trading, your actual exchange balances will be used.
+ INITIAL_USDT_BALANCE / INITIAL_CRYPTO_BALANCE: These define your starting capital for paper trading simulations. For live trading, your actual exchange balances will be used.
 
- LOOKBACK\_DAYS\_TRAINING: Determines the amount of historical data (in days) used to train the prediction model (only went as far back as 4 years, default is 2 years).
+ LOOKBACK_DAYS_TRAINING: Determines the amount of historical data (in days) used to train the prediction model (only went as far back as 4 years, default is 2 years).
 
- SEQUENCE\_LENGTH: Represents the number of past time steps (e.g., minutes of candle data) the Transformer model analyzes for each prediction.
+ SEQUENCE_LENGTH: Represents the number of past time steps (e.g., minutes of candle data) the Transformer model analyzes for each prediction.
 
- NUM\_TRAINING\_RUNS: The number of individual training sessions performed for each ATR multiplier value during optimization. Reducing this can speed up initial setup (you can go higher than 5, but the model will plateau or overfit data).
+ NUM_TRAINING_RUNS: The number of individual training sessions performed for each ATR multiplier value during optimization. Reducing this can speed up initial setup (you can go higher than 5, but the model will plateau or overfit data).
 
- NUM\_TRAIN\_EPOCHS: The maximum number of training epochs per model. Consider lowering this for quicker testing cycles (best is what its at just leave it).
+ NUM_TRAIN_EPOCHS: The maximum number of training epochs per model. Consider lowering this for quicker testing cycles (best is what its at just leave it).
 
- ATR\_MULTIPLIERS\_TO\_TEST: A list of volatility multipliers that the bot will evaluate to find the most effective trading threshold (have fun with this, it runs all and find the most ‘well trained’ model). 
+ ATR_MULTIPLIERS_TO_TEST: A list of volatility multipliers that the bot will evaluate to find the most effective trading threshold (have fun with this, it runs all and find the most ‘well trained’ model). 
 
 **6.** **Running the Bot**
 
@@ -151,17 +151,17 @@ For persistent environment variables on Windows, you will need to add them via t
 
  Simply stop the bot at any time by pressing Ctrl+C. This action will trigger a shutdown routine that includes saving your trade history. You should start the bot at the lowest price point of the day (what you think it is). If you wish to initiate the bots operation at a specific market condition, start like this…
 
-	rm ./trading\_logs/\*; rm ./crypto\_transformer\_model\_best.pth; rm ./standard\_scaler\_best.pkl; rm \-rf ./logs/\*; rm \-rf ./results/\*; python ./[kraken-trans-bot.py](http://kraken-trans-bot.py)
+	rm ./trading_logs/*; rm ./crypto_transformer_model_best.pth; rm ./standard_scaler_best.pkl; rm -rf ./logs/*; rm -rf ./results/*; python ./kraken-trans-bot.py
 
  This will clear all the previous logs and retrain the model, sometimes this helpful.
 
- Initial Holdings: The INITIAL\_CRYPTO\_BALANCE and INITIAL\_USDT\_BALANCE settings are crucial for paper trading. If you want to simulate starting with a specific asset distribution at a "low point," adjust these values accordingly before launching in paper mode.
+ Initial Holdings: The INITIAL_CRYPTO_BALANCE and INITIAL_USDT_BALANCE settings are crucial for paper trading. If you want to simulate starting with a specific asset distribution at a "low point," adjust these values accordingly before launching in paper mode.
 
 **7. ** **Monitoring with TensorBoard**
 
  The bot extensively logs its training metrics and live trading performance, which can be visualized using TensorBoard. To access these logs, open a new terminal window (I run screen for this in linux), activate your Python virtual environment, and run:
 
-	tensorboard \--logdir=./logs \--bind\_all
+	tensorboard --logdir=./logs --bind_all
  
 (sometimes it does not work, try this)
 
@@ -170,9 +170,9 @@ For persistent environment variables on Windows, you will need to add them via t
 
  Then, open your web browser and navigate to the address provided by TensorBoard (typically [http://localhost:6006](http://localhost:6006)). You will find distinct log directories for:
 
-./logs/run\_\*: Detailed metrics from each model training run.
+./logs/run_*: Detailed metrics from each model training run.
 
-./trading\_logs: Comprehensive performance metrics and trade events from the live (or paper) trading sessions.
+./trading_logs: Comprehensive performance metrics and trade events from the live (or paper) trading sessions.
 
 **8.**  **Analyzing Trade History**
 
