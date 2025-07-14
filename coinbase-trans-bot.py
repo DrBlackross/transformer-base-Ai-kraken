@@ -27,6 +27,14 @@ LIVE_TRADING = False
 COINBASE_API_KEY = os.getenv('COINBASE_API_KEY')
 COINBASE_API_SECRET = os.getenv('COINBASE_API_SECRET')
 # (don't know if this will work yet, in theory it should)
+# might need a .env file with key/secret added or touched, not my first goto on a project
+# my goto usually with coinbase is
+# COINBASE_API_KEY = ('organizations/COINBASE_KEY_SHOULD_BE_LIKE_THIS/apiKeys/AND_THE_REST_OF_THE_KEY')
+# COINBASE_API_SECRET = ('-----BEGIN EC PRIVATE KEY-----\FUN_PART_OF_COINBASE_NIGHTMARE_API_SECRET\n-----END EC PRIVATE KEY-----\n')
+# or the like... but it should work with 
+# export COINBASE_API_KEY='your_api_key_here'
+# export COINBASE_API_SECRET='your_api_secret_here'
+# (never does for me)
 
 
 # Select trading pair (BTC/USD or DOGE/USD)
