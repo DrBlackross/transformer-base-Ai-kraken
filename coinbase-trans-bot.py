@@ -26,6 +26,8 @@ pd.set_option('future.no_silent_downcasting', True)
 LIVE_TRADING = False
 COINBASE_API_KEY = os.getenv('COINBASE_API_KEY')
 COINBASE_API_SECRET = os.getenv('COINBASE_API_SECRET')
+# (don't know if this will work yet, in theory it should)
+
 
 # Select trading pair (BTC/USD or DOGE/USD)
 TRADING_PAIR = 'BTC/USD'  # Change this to switch between BTC and DOGE
