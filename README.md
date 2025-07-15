@@ -179,17 +179,16 @@ For persistent environment variables on Windows, you will need to add them via t
 
 It always look like its falling (for me) on Tensorboard, but its really not
 Currently
-Making decision at 2025-07-15 14:58:18
-
---------------------------------------------------
-|  Action: BUY | Price: 0.19000    (Confidence: 52.03%)
---------------------------------------------------
-|  DOGE Balance: 123.5931
-|  USDT Balance: 2.37
-|  Portfolio Value: 25.86 USDT
---------------------------------------------------
-
-Trade amount too small: 2.14 USDT (minimum: 5.0 USDT)
+	
+ 	Making decision at 2025-07-15 14:58:18
+	--------------------------------------------------
+	|  Action: BUY | Price: 0.19000    (Confidence: 52.03%)
+	--------------------------------------------------
+	|  DOGE Balance: 123.5931
+	|  USDT Balance: 2.37
+	|  Portfolio Value: 25.86 USDT
+	--------------------------------------------------
+	Trade amount too small: 2.14 USDT (minimum: 5.0 USDT)
 
 What started with
 
