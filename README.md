@@ -178,7 +178,8 @@ For persistent environment variables on Windows, you will need to add them via t
   <img width="1760" height="688" alt="image" src="https://github.com/user-attachments/assets/691bfe3d-5b89-4149-97d5-b82ccc56a8ae" />
 
 It always look like its falling (for me) on Tensorboard, but its really not
-Currently
+
+   Currently
 	
  	Making decision at 2025-07-15 14:58:18
 	--------------------------------------------------
@@ -190,7 +191,7 @@ Currently
 	--------------------------------------------------
 	Trade amount too small: 2.14 USDT (minimum: 5.0 USDT)
 
-What started with
+What I started with
 
 	if TRADING_PAIR == 'DOGEUSDT':
 	    MODEL_PATH_BASE = './doge_transformer_model'
