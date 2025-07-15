@@ -177,7 +177,7 @@ For persistent environment variables on Windows, you will need to add them via t
   Overall though
   <img width="1760" height="688" alt="image" src="https://github.com/user-attachments/assets/691bfe3d-5b89-4149-97d5-b82ccc56a8ae" />
 
-It always look like its falling (for me) on Tensorboard, but its really not
+It always looks like its falling (for me) on Tensorboard, but its really not...
 
    Currently
 	
@@ -202,9 +202,21 @@ What I started with
 	    CRYPTO_DECIMALS = 4
 	    DEFAULT_ATR_MULTIPLIER = 0.15
 	
-Then again if I started with a USDT balance of $0 would it be much different? Tensorboard is a bit hard to hard to read at a glance.
+Then again if I started with a USDT balance of $0 would it be much different? Tensorboard is a bit hard to hard to read at a glance. I always check the commandline...
+**8.** **Crontab it
 
-**8.**  **Analyzing Trade History**
+My crontab setup for this script is... (screen + crontab works for me)
+
+	#### (delete logs and train) ####
+	# @reboot /usr/bin/screen -dmS DayTrader bash -c "cd /Location/Of_script_folder/transformer-base-Ai-kraken/; rm /Location/Of_script_folder/transformer-base-Ai-kraken/trading_logs/*; rm /Location/Of_script_folder/transformer-base-Ai-kraken/crypto_transformer_model_best.pth; rm /Location/Of_script_folder/transformer-base-Ai-kraken/standard_scaler_best.pkl; rm -rf /Location/Of_script_folder/transformer-base-Ai-kraken/logs/*; rm -rf /Location/Of_script_folder/transformer-base-Ai-kraken/results/*; python /Location/Of_script_folder/transformer-base-Ai-kraken/kraken-trans-bot.py"
+	
+	#### (dont delete logs and run with trained model) ####
+	##kraken##
+	# @reboot /usr/bin/screen -dmS DayTrader bash -c "cd /Location/Of_script_folder/transformer-base-Ai-kraken/; source .venv/bin/activate; python /Location/Of_script_folder/transformer-base-Ai-kraken/kraken-trans-bot.pySSRsi-Kraken.py"
+
+(remove the # at the begining of the @reboot line to enable)
+
+**9.**  **Analyzing Trade History**
 
  Upon a shutdown of the bot (via Ctrl+C), a trade\_history.csv file will be generated or updated in the projects root directory. This file contains a detailed record of all transactions executed during that session, including trade type, amount, price, and timestamp.
 
