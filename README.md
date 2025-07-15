@@ -1,4 +1,4 @@
-(i've been lurking on github for years, this is my best attempt at replacing all the old crypto strategy based scripts (for my needs) since askmike came out with Gekko... here is my take, feel free to muck with it just give credit, any issues, you can post but i will probably never see it LOL (i do know this works well with kraken, coinbase being what the api is, its touchy))
+(i've been lurking on github for years, this is my best attempt at replacing all the old crypto strategy based scripts (for my needs) since askmike came out with Gekko... here is my take, feel free to muck with it just give credit, any issues, you can post but I will probably never see it LOL (i do know this works well with kraken, coinbase being what the api is, its touchy))
 
 # Kraken Transformer Trading Bot
 
@@ -173,6 +173,36 @@ For persistent environment variables on Windows, you will need to add them via t
 ./logs/run_*: Detailed metrics from each model training run.
 
 ./trading_logs: Comprehensive performance metrics and trade events from the live (or paper) trading sessions.
+
+  Overall though
+  <img width="1760" height="688" alt="image" src="https://github.com/user-attachments/assets/691bfe3d-5b89-4149-97d5-b82ccc56a8ae" />
+
+It always look like its falling (for me) on Tensorboard, but its really not
+Currently
+Making decision at 2025-07-15 14:58:18
+
+--------------------------------------------------
+|  Action: BUY | Price: 0.19000    (Confidence: 52.03%)
+--------------------------------------------------
+|  DOGE Balance: 123.5931
+|  USDT Balance: 2.37
+|  Portfolio Value: 25.86 USDT
+--------------------------------------------------
+
+Trade amount too small: 2.14 USDT (minimum: 5.0 USDT)
+
+What started with
+
+	if TRADING_PAIR == 'DOGEUSDT':
+	    MODEL_PATH_BASE = './doge_transformer_model'
+	    INITIAL_USDT_BALANCE = 10.0
+	    INITIAL_CRYPTO_BALANCE = 86.77  # DOGE
+	    MIN_TRADE_AMOUNT = 5.0
+	    CRYPTO_NAME = 'DOGE'
+	    CRYPTO_DECIMALS = 4
+	    DEFAULT_ATR_MULTIPLIER = 0.15
+	
+Then again if I started with a USDT balance of $0 would it be much different? Tensorboard is a bit hard to hard to read at a glance.
 
 **8.**  **Analyzing Trade History**
 
