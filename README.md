@@ -179,7 +179,7 @@ For persistent environment variables on Windows, you will need to add them via t
   Overall though
   <img width="1760" height="688" alt="image" src="https://github.com/user-attachments/assets/691bfe3d-5b89-4149-97d5-b82ccc56a8ae" />
 
-It always looks like its falling (for me) on Tensorboard, but its really not...
+It always looks like its failing (for me) on Tensorboard, but its really not...
 
    Currently
 	
