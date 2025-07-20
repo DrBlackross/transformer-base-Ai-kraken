@@ -1,7 +1,9 @@
 (i've been lurking on github for years, this is my best attempt at replacing all the old crypto strategy based scripts (for my needs) since askmike came out with Gekko... here is my take, feel free to muck with it just give credit, any issues, you can post but I will probably never see it LOL (i do know this works well with kraken, coinbase being what the api is, its touchy))
 
-# Kraken Transformer Trading Bot
-
+# Generic Kraken Transformer Trading Bot
+Repository: https://github.com/DrBlackross/transformer-base-Ai-kraken
+ The gist of this, using transformers is way easier than all the extra scripts required for my simple RSI in this script or my other one both running CPU only. The other RSI scripts are a straight math/time (math over time), using transformers they have been "technically" easier (with setup and walk away). But also with transformers they learn the markets past and look forward which is IMHO easier. 
+ 
 <img width="1760" height="688" alt="image" src="https://github.com/user-attachments/assets/d4340160-823b-4df2-9cfa-10bbceb6a0aa" />
 
 
