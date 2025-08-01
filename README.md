@@ -107,21 +107,31 @@ But, I know for sure hardcoding worked for testing, coinbase api is bit *weird*
 
 #### **Key parameters you might want to adjust include (for fun IN PAPER):**
 
- 	LIVE_TRADING: Set to False for paper trading (highly recommended for initial testing), or True for live trading (see yada-yada at bottom of README).
+ 	LIVE_TRADING: Set to False for paper trading (highly recommended for initial testing), or 
+  	True for live trading (see yada-yada at bottom of README).
 
- 	TRADING_PAIR: Select your desired cryptocurrency pair, e.g., 'DOGEUSDT' or 'XBTUSDT' (Kraken) OR 'DOGE/USDT' or 'BTC/USDT' (CoinBase).
+ 	TRADING_PAIR: Select your desired cryptocurrency pair, e.g., 'DOGEUSDT' or 'XBTUSDT' (Kraken)
+  	OR 'DOGE/USDT' or 'BTC/USDT' (CoinBase).
 
- 	INITIAL_USDT_BALANCE / INITIAL_CRYPTO_BALANCE: These define your starting capital for paper trading simulations. For live trading, your actual exchange balances will be used.
+ 	INITIAL_USDT_BALANCE / INITIAL_CRYPTO_BALANCE: These define your starting capital for 
+  	paper trading simulations. For live trading, your actual exchange balances will be used.
 
-	LOOKBACK_DAYS_TRAINING: Determines the amount of historical data (in days) used to train the prediction model (only went as far back as 4 years, default is 2 years).
+	LOOKBACK_DAYS_TRAINING: Determines the amount of historical data (in days) used to 
+ 	train the prediction model (only went as far back as 4 years, default is 2 years).
 
- 	SEQUENCE_LENGTH: Represents the number of past time steps (e.g., minutes of candle data) the Transformer model analyzes for each prediction.
+ 	SEQUENCE_LENGTH: Represents the number of past time steps (e.g., minutes of candle 
+  	data) the Transformer model analyzes for each prediction.
 
- 	NUM_TRAINING_RUNS: The number of individual training sessions performed for each ATR multiplier value during optimization. Reducing this can speed up initial setup (you can go higher than 5, but the model will plateau or overfit data).
+ 	NUM_TRAINING_RUNS: The number of individual training sessions performed for each ATR 
+  	multiplier value during optimization. Reducing this can speed up initial setup (you 
+   	can go higher than 5, but the model will plateau or overfit data).
 
- 	NUM_TRAIN_EPOCHS: The maximum number of training epochs per model. Consider lowering this for quicker testing cycles (best is what its at just leave it).
+ 	NUM_TRAIN_EPOCHS: The maximum number of training epochs per model. Consider lowering 
+  	this for quicker testing cycles (best is what its at just leave it).
 
-	ATR_MULTIPLIERS_TO_TEST: A list of volatility multipliers that the bot will evaluate to find the most effective trading threshold (have fun with this, it runs all and find the most ‘well trained’ model). 
+	ATR_MULTIPLIERS_TO_TEST: A list of volatility multipliers that the bot will evaluate
+ 	to find the most effective trading threshold (have fun with this, it runs all and
+  	find the most ‘well trained’ model). 
 
 **6.** **Running the Bot**
 
