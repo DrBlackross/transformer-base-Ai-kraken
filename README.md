@@ -1,5 +1,6 @@
-## UNLESS YOUR TRADING $10k+ IN VOLUME ON KRAKEN THIS BOT WILL NO LONG SHOW PROFIT (they up the maker/taker fess)
-# kraken-transformerbot-jetson-UPDATED-REDO.py will the last update to this script, i will focus on shifting it to coinbase (ugh)
+# UNLESS YOUR TRADING $10k+ IN VOLUME ON KRAKEN THIS BOT WILL NO LONG SHOW PROFIT (they up the maker/taker fess)
+### kraken-transformerbot-jetson-UPDATED-REDO.py will the last update to this script, i will focus on shifting it to coinbase (ugh)
+### (also added comments at the begining of the script on the .env format etc. also went with a straight forward discord webhook setup and a flask page TensorBoard was a bit overkill)
 
 (i've been lurking on github for years, this is my best attempt at replacing all the old crypto strategy based scripts (for my needs) since askmike came out with Gekko... here is my take, feel free to muck with it just give credit, any issues, you can post but I will probably never see it LOL (i do know this works well with kraken, coinbase being what the api is, its touchy))
 
