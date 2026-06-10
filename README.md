@@ -1,3 +1,6 @@
+## UNLESS YOUR TRADING $10k+ IN VOLUME ON KRAKEN THIS BOT WILL NO LONG SHOW PROFIT (they up the maker/taker fess)
+you can try using it on coinbase
+
 (i've been lurking on github for years, this is my best attempt at replacing all the old crypto strategy based scripts (for my needs) since askmike came out with Gekko... here is my take, feel free to muck with it just give credit, any issues, you can post but I will probably never see it LOL (i do know this works well with kraken, coinbase being what the api is, its touchy))
 
 # Generic Kraken Transformer Trading Bot
