@@ -1,3 +1,30 @@
+#### THIS BOT WILL NOT SEE A PROFIT TILL KRAKEN DROPS THEIR MAKER/TAKER FEES
+## changed to 
+## 30- Day Volume (USD)     Maker      Taker
+##     $0+	                0.25%	   0.40%
+#### which sucks, i tweeked it enough to a point i was about to post this updated script here and that happened
+#### added back testing btw
+# Backtest with new settings
+## python kraken-transformerbot-jetson-UPDATED-REDO.py --mode backtest --days 90
+
+# Train the AI model
+## python kraken-transformerbot-jetson-UPDATED-REDO.py --mode train --days 90
+
+# Live trading (paper or real based on .env)
+## python kraken-transformerbot-jetson-UPDATED-REDO.py --mode live
+
+#### Need an .env file in the root of the script, format is....
+# LIVE_TRADING=true
+# KRAKEN_API_KEY=KRAKEN_KEY_HERE
+# KRAKEN_API_SECRET=KRAKEN_SECRET_HERE
+# TRADING_PAIR=DOGEUSDT
+# DOGEUSDT or XBTUSDT
+# USE_REASONING_LM=true
+# DECISION_INTERVAL_SECONDS=180
+# DISCORD_WEBHOOK_URL=PUT DISCORD WEBHOOK HERE 
+#### the discord webhook was nice lol
+
+
 #!/usr/bin/env python3
 
 import os
